@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>timeSelection</title>
+        </head>
+        <body>
+            <h1>Please Set a Time-Frame to Gather Tweets From</h1>
+            <p>Note: The Earliest Date we Can Accomodate is Jan 2020. Retweets will be exlcuded and a max of 100 tweets can be displayed at a time</p>
+            <br>
+            <p>WARNING: The longer the time range the longer it will take to load.</p>
+            <form action="{{url_for('handlePostTime')}}" method="POST">
+                <fieldset>
+                    <p>Start:</p>
+                    <label> Month:
+                        <input type ="number" id="month1" name="Month1" size="30" maxlength="2" required="required">
+                    </label>
+                    <label> Year:
+                        <input type ="number" id="year1" name="year1" size="30" maxlength="4" required="required">
+                    </label>
+                    <label> Day:
+                        <input type ="number" id="day1" name="day1" size="30" maxlength="2" required="required">
+                    </label>
+                    <p>End:</p>
+                    <label> Month:
+                        <input type ="number"  id="month2" name="Month2" size="30" maxlength="2" required="required">
+                    </label>
+                    <label> Year:
+                        <input type ="number" id="year2" name="year2" size="30" maxlength="4" required="required">
+                    </label>
+                    <label> Day:
+                        <input type ="number" id="day2" name="day2" size="30" maxlength="2" required="required">
+                    </label>
+                </fieldset>
+                <p>Click to view your digest</p>
+                <input type="submit" value="View Digest">
+            </form>
+        </body>
+</html>

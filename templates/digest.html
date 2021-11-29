@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>digest</title>
+        </head>
+        <style>
+            .column {
+	        flex: 50.00%;
+	        height: 200px;
+	        padding: 10px;
+	        margin: 5px;
+	        background-color: #cccccc;
+	        text-align: center;
+	    }
+	.container {
+	   display: flex;
+	}	
+        </style>
+        <body>
+            <a href="static/share.html">share link</a>
+            <h1> Digest of Covid Related Tweets From Your Source(s) </h1>
+                <table border= "1">
+                    "{% for key, value in tweetsAndTimes.items() %}"
+                    <tr>
+                        <th>{{ key }}</th>
+                        <td>{{ value }}</td>
+                    </tr>
+                    "{% endfor %}"
+                </table> 
+                <p>Want to send this info to a friend? Click here to share via email</p>
+                <form action="{{url_for('sharePage')}}" method="GET">
+                    <input type="submit" value="Click to Share!">
+                </form>
+            
+        </body>
+</html>

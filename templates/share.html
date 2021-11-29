@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Thanks for sharing!</title>
+        </head>
+        <body>
+            <form action="{{url_for('emailOut')}}" method="POST">
+                <fieldset>
+                    <p>Please enter up to three emails to send your digest out to.</p>
+                    <label> 
+                        <input type ="text" id="email1" name="email1" size="30" maxlength="100" required="required">
+                    </label>
+                    <label> 
+                        <input type ="text" id="email2" name="email2" size="30" maxlength="100">
+                    </label>
+                    <label> 
+                        <input type ="text" id="email3" name="email3" size="30" maxlength="100" >
+                    </label>
+                    <p>Please enter a name to put in the email subject line</p>
+                    <label> 
+                        <input type ="text" id="identifier" name="iden" size="30" maxlength="100" required="required">
+                    </label>
+                </fieldset>
+                <p>Click to share...</p>
+                <input type="submit" value="Share">
+            </form>
+        </body>
+</html>

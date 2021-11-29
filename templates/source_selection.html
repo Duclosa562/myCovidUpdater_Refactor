@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>sourceSelection</title>
+        </head>
+        <body>
+            <h1>Source Selection</h1>
+        </body>
+        
+        <p>Select up to 3 options from our list of verified sources...</p>
+        <form action="{{url_for('handlePostSelection')}}" method="POST">
+            <fieldset>
+                <select prompt="Type to see options"  class="chosen-select" id="sources" name="Source" multiple>
+                    <option value="POTUS">@POTUS</option>
+                    <option value="CDC">@CDC</option>
+                    <option value="LocalGov">@LocalGov</option>
+                    <option value="Scientist1">@Scientist1</option>
+                    <option value="AFauci">@AFauci</option>
+                </select>
+                <p>Next we are going to ask you for a timeframe to analyze for tweets with the keyword COVID from your source(s)</p>
+            </fieldset>
+            <input type="submit" value="Next">
+        </form>
+</html>
